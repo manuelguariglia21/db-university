@@ -1,0 +1,50 @@
+<!---- ESERCIZIO 1 ---->
+
+SELECT *
+FROM `students`
+WHERE YEAR(`date_of_birth`) = 1990;
+
+<!---- ESERCIZIO 2 ---->
+
+SELECT * 
+FROM `courses` 
+WHERE `cfu` > 10;
+
+<!---- ESERCIZIO 3 ---->
+
+SELECT * 
+FROM `students` 
+WHERE YEAR(`date_of_birth`) < 1993;
+
+<!---- ESERCIZIO 4 ---->
+
+SELECT *
+FROM `courses` 
+WHERE `year` = 1 
+AND `period` = 'I semestre`; 
+
+<!---- ESERCIZIO 5 ---->
+
+SELECT * 
+FROM `exams` 
+WHERE `date` = '2020-06-20'
+AND `hour` > '14:00:00'; 
+
+<!---- ESERCIZIO 6 ---->
+
+
+SELECT `name` AS 'corso_di_laurea', `level` AS 'tipo'
+FROM `degrees`
+WHERE `level` = "magistrale"
+ORDER BY `name`;
+
+<!---- ESERCIZIO 7 ---->
+
+SELECT COUNT(*) AS 'totale_dipartimenti'
+FROM `departments`;
+
+<!---- ESERCIZIO 8 ---->
+
+SELECT COUNT(*) AS 'insegnanti_senza_recapito'
+FROM `teachers`
+WHERE `phone` <> '3%';
